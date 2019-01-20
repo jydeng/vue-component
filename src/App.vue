@@ -3,7 +3,8 @@
     <router-view></router-view>
     <div id="nav">
       <router-link to="/">1. Home </router-link> |
-      <router-link to="/form">2. Form </router-link>
+      <router-link to="/form">2. Form </router-link> |
+      <router-link to="/checkbox">3. CheckBox </router-link>
     </div>
   </div>
 </template>
@@ -13,6 +14,7 @@
   position: absolute;
   top: 30%;
   left: 50%;
+  width: 200px;
   transform: translate(-50%, -50%);
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
