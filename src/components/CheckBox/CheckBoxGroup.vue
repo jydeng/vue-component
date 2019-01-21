@@ -4,6 +4,7 @@
 <script>
 import { findComponentsDownward } from "../../utils/assist.js";
 import Emitter from "../../mixins/emitter.js";
+
 export default {
   name: "iCheckboxGroup",
   mixins: [Emitter],
@@ -43,7 +44,7 @@ export default {
       this.dispatch("iFormItem", "on-form-change", data);
     }
   },
-  mounted() {
+  created() {
     this.updateModel(true);
   },
   watch: {

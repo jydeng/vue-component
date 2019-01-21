@@ -1,26 +1,29 @@
 <template>
   <div>
-    <h3>CheckBox&CheckBoxGroup组件</h3>
-    <iCheckbox v-model="checked">单个测试</iCheckbox>
-    {{checked}}
-    <iCheckboxGroup>
-      选项组测试
-      <iCheckbox label="A" v-model="checkedlist">A</iCheckbox>
-      <iCheckbox label="B" v-model="checkedlist">B</iCheckbox>
-      <iCheckbox label="C" v-model="checkedlist">C</iCheckbox>
-    </iCheckboxGroup>
-    {{checkedlist}}
+    <h3>组合多选框组件——CheckboxGroup & Checkbox</h3>
+    <i-checkbox v-model="single">单独选项</i-checkbox>
+    <br />
+    数据：{{ single }} <br />
+    <br />
+    <i-checkbox-group v-model="multiple">
+      <i-checkbox label="option1">选项 1</i-checkbox>
+      <i-checkbox label="option2">选项 2</i-checkbox>
+      <i-checkbox label="option3">选项 3</i-checkbox>
+      <i-checkbox label="option4">选项 4</i-checkbox>
+    </i-checkbox-group>
+    <br />
+    数据：{{ multiple }}
   </div>
 </template>
 <script>
+import iCheckboxGroup from "../components/CheckBox/CheckBoxGroup.vue";
 import iCheckbox from "../components/CheckBox/CheckBox.vue";
-import iCheckboxGroup from "../components/CheckBox/CheckBoxGroup";
 export default {
-  components: { iCheckbox, iCheckboxGroup },
+  components: { iCheckboxGroup, iCheckbox },
   data() {
     return {
-      checked: false,
-      checkedlist: ["A"]
+      single: false,
+      multiple: ["option1"]
     };
   }
 };

@@ -25,7 +25,7 @@ import Emitter from "../../mixins/emitter.js";
 import { findComponentUpward } from "../../utils/assist.js";
 
 export default {
-  name: "iChekbox",
+  name: "iCheckbox",
   mixins: [Emitter],
   props: {
     label: {
