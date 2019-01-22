@@ -1,16 +1,13 @@
 <template>
   <div>
     <label v-if="label" :class="{ 'i-form-item-label-required': isRequired }">
-      {{
-      label
-      }}
+      {{ label }}
     </label>
     <div>
       <slot></slot>
-      <div
-        v-if="validateState === 'error'"
-        class="i-form-item-message"
-      >{{ validateMessage }}</div>
+      <div v-if="validateState === 'error'" class="i-form-item-message">
+        {{ validateMessage }}
+      </div>
     </div>
   </div>
 </template>

@@ -9,9 +9,13 @@
         <i-input v-model="formValidate.mail"></i-input>
       </i-form-item>
       <i-form-item prop="agree" label="同意">
-        <i-checkbox v-model="formValidate.agree" true-value="1" false-value></i-checkbox>
+        <i-checkbox
+          v-model="formValidate.agree"
+          true-value="1"
+          false-value
+        ></i-checkbox>
       </i-form-item>
-      <i-form-item  label="兴趣">
+      <i-form-item label="兴趣">
         <i-checkbox-group v-model="formValidate.fun">
           <i-checkbox label="option1">选项 1</i-checkbox>
           <i-checkbox label="option2">选项 2</i-checkbox>
@@ -58,7 +62,6 @@ export default {
   methods: {
     handleSubmit() {
       this.$refs.form.validate(valid => {
-        console.log(valid);
         if (valid) {
           window.alert("提交成功");
         } else {

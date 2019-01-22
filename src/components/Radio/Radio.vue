@@ -3,48 +3,63 @@
     <span>
       <input
         type="radio"
-        :disabled="disabled"
+        :value="label"
         :checked="currentValue"
         @change="change"
-      >
+      />
     </span>
     <slot></slot>
   </label>
 </template>
 <script>
+import { findComponentUpward } from "../../utils/assist.js";
+
 export default {
   name: "iRadio",
   props: {
     label: {
-      type: [String, Number, Boolean]
-    },
-    disabled: {
-      type: Boolean,
-      default: false
+      type: [Number, String, Boolean]
     },
     value: {
-      type: [String, Number, Boolean],
-      default: false
-    },
-    trueValue: {
-      type: [String, Number, Boolean],
-      default: true
-    },
-    falseValue: {
-      type: [String, Number, Boolean],
-      default: false
+      type: [String, Number, Boolean]
     }
   },
   data() {
     return {
-      currentValue: this.value
+      currentValue: this.value,
+      model: "",
+      group: false,
+      parent: null
     };
   },
   methods: {
-    change(event) {
-      if (this.disabled) {
-        return false;
+    change() {
+      if (this.group) {
+        this.parent.change(this.label);
+      } else {
+        this.$emit("input", this.label);
       }
+    },
+    updateModel() {
+      this.currentValue = this.value === this.label;
+    }
+  },
+  watch: {
+    value() {
+      this.updateModel();
+    }
+  },
+  mounted() {
+    this.parent = findComponentUpward(this, "iRadioGroup");
+
+    if (this.parent) {
+      this.group = true;
+    }
+
+    if (this.group) {
+      this.parent.updateModel(true);
+    } else {
+      this.updateModel();
     }
   }
 };

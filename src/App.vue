@@ -4,7 +4,8 @@
     <div id="nav">
       <router-link to="/">1. Home </router-link> |
       <router-link to="/form">2. Form </router-link> |
-      <router-link to="/checkbox">3. CheckBox </router-link>
+      <router-link to="/checkbox">3. CheckBox </router-link> |
+      <router-link to="/radio">4. Radio </router-link>
     </div>
   </div>
 </template>
