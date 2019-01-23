@@ -9,11 +9,7 @@
         <i-input v-model="formValidate.mail"></i-input>
       </i-form-item>
       <i-form-item prop="agree" label="同意">
-        <i-checkbox
-          v-model="formValidate.agree"
-          true-value="1"
-          false-value
-        ></i-checkbox>
+        <i-checkbox v-model="formValidate.agree" true-value="1" false-value></i-checkbox>
       </i-form-item>
       <i-form-item label="兴趣">
         <i-checkbox-group v-model="formValidate.fun">
@@ -23,6 +19,13 @@
           <i-checkbox label="option4">选项 4</i-checkbox>
         </i-checkbox-group>
       </i-form-item>
+      <i-form-item label="单选" prop="picked">
+        <i-radio-group v-model="formValidate.picked">
+          <i-radio label="A">A</i-radio>
+          <i-radio label="B">B</i-radio>
+          <i-radio label="C">C</i-radio>
+        </i-radio-group>
+      </i-form-item>
     </i-form>
     <div>
       <button @click="handleSubmit">提交</button>
@@ -31,21 +34,32 @@
   </div>
 </template>
 <script>
-import iForm from "../components/Form/Form.vue";
-import iFormItem from "../components/Form/FormItem.vue";
-import iInput from "../components/Input/Input.vue";
-import iCheckbox from "../components/CheckBox/CheckBox.vue";
+import iForm from "../components/Form/Form";
+import iFormItem from "../components/Form/FormItem";
+import iInput from "../components/Input/Input";
+import iCheckbox from "../components/CheckBox/CheckBox";
 import iCheckboxGroup from "../components/CheckBox/CheckBoxGroup";
+import iRadio from "../components/Radio/Radio";
+import iRadioGroup from "../components/Radio/RadioGroup";
 
 export default {
-  components: { iForm, iFormItem, iInput, iCheckbox, iCheckboxGroup },
+  components: {
+    iForm,
+    iFormItem,
+    iInput,
+    iCheckbox,
+    iCheckboxGroup,
+    iRadio,
+    iRadioGroup
+  },
   data() {
     return {
       formValidate: {
         name: "Roy",
         mail: "jydeng@live.cn",
         agree: "1",
-        fun: []
+        fun: [],
+        picked: "A"
       },
       ruleValidate: {
         name: [{ required: true, message: "用户名不能为空", trigger: "blur" }],
@@ -55,7 +69,8 @@ export default {
         ],
         agree: [
           { required: true, message: "请勾选用户协议", trigger: "change" }
-        ]
+        ],
+        picked: [{ required: true, message: "请选择", trigger: "change" }]
       }
     };
   },

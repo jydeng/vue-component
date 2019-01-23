@@ -1,11 +1,15 @@
 <template>
-  <div><slot></slot></div>
+  <div>
+    <slot></slot>
+  </div>
 </template>
 <script>
+import Emitter from "../../mixins/emitter.js";
 import { findComponentsDownward } from "../../utils/assist.js";
 
 export default {
   name: "iRadioGroup",
+  mixins: [Emitter],
   props: {
     value: {
       type: [String, Number, Boolean]
@@ -21,6 +25,8 @@ export default {
     change(data) {
       this.currentValue = data;
       this.$emit("input", data);
+      this.$emit("on-change", data);
+      this.dispatch("iFormItem", "on-form-change", data);
     },
     updateModel(update) {
       this.childrens = findComponentsDownward(this, "iRadio");

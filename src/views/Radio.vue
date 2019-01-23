@@ -7,7 +7,7 @@
     选中：{{ picked }}
     <div>
       <i-radio-group v-model="mu">
-        组：
+        单选组：
         <i-radio label="A">A</i-radio>
         <i-radio label="B">B</i-radio>
         <i-radio label="C">C</i-radio>

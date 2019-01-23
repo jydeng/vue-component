@@ -6,16 +6,18 @@
         :value="label"
         :checked="currentValue"
         @change="change"
-      />
+      >
     </span>
     <slot></slot>
   </label>
 </template>
 <script>
+import Emitter from "../../mixins/emitter.js";
 import { findComponentUpward } from "../../utils/assist.js";
 
 export default {
   name: "iRadio",
+  mixins: [Emitter],
   props: {
     label: {
       type: [Number, String, Boolean]
@@ -38,6 +40,7 @@ export default {
         this.parent.change(this.label);
       } else {
         this.$emit("input", this.label);
+        this.dispatch("iFormItem", "on-form-change", value);
       }
     },
     updateModel() {
