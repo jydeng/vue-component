@@ -25,6 +25,21 @@ export default new Router({
       path: "/radio",
       name: "radio",
       component: () => import("./views/Radio.vue")
+    },
+    {
+      path: "/display",
+      name: "display",
+      component: () => import("./views/Display.vue")
+    },
+    {
+      path: "/alert",
+      name: "alert",
+      component: () => import("./views/Alert.vue")
+    },
+    {
+      path: "/table",
+      name: "table",
+      component: () => import("./views/Table.vue")
     }
   ]
 });

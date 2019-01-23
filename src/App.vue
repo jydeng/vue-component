@@ -5,7 +5,10 @@
       <router-link to="/">1. Home </router-link> |
       <router-link to="/form">2. Form </router-link> |
       <router-link to="/checkbox">3. CheckBox </router-link> |
-      <router-link to="/radio">4. Radio </router-link>
+      <router-link to="/radio">4. Radio </router-link> |
+      <router-link to="/display">5. Display </router-link> |
+      <router-link to="/alert">6. Alert </router-link> |
+      <router-link to="/table">7. Table </router-link> 
     </div>
   </div>
 </template>
