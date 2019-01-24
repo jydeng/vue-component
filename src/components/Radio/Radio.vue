@@ -40,7 +40,7 @@ export default {
         this.parent.change(this.label);
       } else {
         this.$emit("input", this.label);
-        this.dispatch("iFormItem", "on-form-change", value);
+        this.dispatch("iFormItem", "on-form-change", this.label);
       }
     },
     updateModel() {

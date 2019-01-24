@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <slot></slot>
-  </div>
+  <div><slot></slot></div>
 </template>
 <script>
 import Emitter from "../../mixins/emitter.js";
