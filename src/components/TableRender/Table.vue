@@ -9,7 +9,12 @@
       <tr v-for="(row, i) in data" :key="i">
         <td v-for="(col, k) in columns" :key="k">
           <template v-if="'render' in col">
-            <Render :row="row" :column="col" :index="i" :render="col.render"></Render>
+            <Render
+              :row="row"
+              :column="col"
+              :index="i"
+              :render="col.render"
+            ></Render>
           </template>
           <template v-else>{{ row[col.key] }}</template>
         </td>

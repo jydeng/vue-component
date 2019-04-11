@@ -6,7 +6,7 @@
         :value="label"
         :checked="currentValue"
         @change="change"
-      >
+      />
     </span>
     <slot></slot>
   </label>

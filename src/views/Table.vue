@@ -3,22 +3,22 @@
     <h3>表格组件——Table</h3>
     <table-render ref="table" :columns="columns" :data="data">
       <template slot-scope="{ row, index }" slot="name">
-        <input type="text" v-model="editName" v-if="editIndex === index">
+        <input type="text" v-model="editName" v-if="editIndex === index" />
         <span v-else>{{ row.name }}</span>
       </template>
 
       <template slot-scope="{ row, index }" slot="age">
-        <input type="text" v-model="editAge" v-if="editIndex === index">
+        <input type="text" v-model="editAge" v-if="editIndex === index" />
         <span v-else>{{ row.age }}</span>
       </template>
 
       <template slot-scope="{ row, index }" slot="birthday">
-        <input type="text" v-model="editBirthday" v-if="editIndex === index">
+        <input type="text" v-model="editBirthday" v-if="editIndex === index" />
         <span v-else>{{ getBirthday(row.birthday) }}</span>
       </template>
 
       <template slot-scope="{ row, index }" slot="address">
-        <input type="text" v-model="editAddress" v-if="editIndex === index">
+        <input type="text" v-model="editAddress" v-if="editIndex === index" />
         <span v-else>{{ row.address }}</span>
       </template>
 
@@ -27,9 +27,7 @@
           <button @click="handleSave(index)">保存</button>
           <button @click="editIndex = -1">取消</button>
         </div>
-        <div v-else>
-          <button @click="handleEdit(row, index)">操作</button>
-        </div>
+        <div v-else><button @click="handleEdit(row, index)">操作</button></div>
       </template>
     </table-render>
   </div>

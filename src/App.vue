@@ -9,7 +9,8 @@
       <router-link to="/display">5. Display </router-link> |
       <router-link to="/alert">6. Alert </router-link> |
       <router-link to="/table">7. Table </router-link> |
-      <router-link to="/tableSlot">8. Table-slot </router-link>
+      <router-link to="/tableSlot">8. Table-slot </router-link> |
+      <router-link to="/heading">9. Heading </router-link>
     </div>
   </div>
 </template>
