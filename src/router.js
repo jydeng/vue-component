@@ -50,6 +50,11 @@ export default new Router({
       path: "/heading",
       name: "heading",
       component: () => import("./views/Heading.vue")
+    },
+    {
+      path: "/messageBox",
+      name: "messageBox",
+      component: () => import("./views/MessageBox.vue")
     }
   ]
 });
