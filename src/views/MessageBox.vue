@@ -15,20 +15,18 @@ export default {
           content: "请填写分类名称",
           isShowInput: true
         })
-        .then(async val => {
-          console.log(val);
-        })
+        .then(async () => {})
         .catch(() => {
           // ...
         });
     },
     handleOpen2() {
-      this.$msgBox.showMsgBox({
-        title: "提示",
-        content: "确认吗"
-      }).then(async val => {
-          console.log(val);
+      this.$msgBox
+        .showMsgBox({
+          title: "提示",
+          content: "确认吗"
         })
+        .then(async () => {})
         .catch(() => {
           // ...
         });

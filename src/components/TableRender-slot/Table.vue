@@ -27,9 +27,8 @@
 </template>
 <script>
 import Render from "./render.js";
-import SlotScope from "./slot.js";
 export default {
-  components: { Render, SlotScope },
+  components: { Render },
   provide() {
     return {
       tableRoot: this

@@ -2,7 +2,7 @@ import msgboxVue from "./index.vue";
 // 定义插件对象
 const MessageBox = {};
 // vue的install方法，用于定义vue插件
-MessageBox.install = function(Vue, options) {
+MessageBox.install = function(Vue) {
   const MessageBoxInstance = Vue.extend(msgboxVue);
   let currentMsg;
   const initInstance = () => {

@@ -8,25 +8,30 @@
       <h3 class="title">{{ title }}</h3>
       <p class="content">{{ content }}</p>
       <div>
-        <input type="text" v-model="inputValue" v-if="isShowInput" ref="input">
+        <input
+          type="text"
+          v-model="inputValue"
+          v-if="isShowInput"
+          ref="input"
+        />
       </div>
       <div class="btn-group">
-        <button
-          class="btn-default"
-          @click="cancel"
-          v-show="isShowCancelBtn"
-        >{{ cancelBtnText }}</button>
+        <button class="btn-default" @click="cancel" v-show="isShowCancelBtn">
+          {{ cancelBtnText }}
+        </button>
         <button
           class="btn-primary btn-confirm"
           @click="confirm"
           v-show="isShowConfimrBtn"
-        >{{ confirmBtnText }}</button>
+        >
+          {{ confirmBtnText }}
+        </button>
       </div>
     </div>
   </div>
 </template>
-    
-    <script>
+
+<script>
 export default {
   props: {
     title: {
@@ -109,6 +114,4 @@ export default {
   }
 };
 </script>
-    <style lang="scss" scoped>
-</style>
-    
+<style lang="scss" scoped></style>
