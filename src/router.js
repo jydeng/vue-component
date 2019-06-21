@@ -55,6 +55,11 @@ export default new Router({
       path: "/messageBox",
       name: "messageBox",
       component: () => import("./views/MessageBox.vue")
+    },
+    {
+      path: "/dnd",
+      name: "dnd",
+      component: () => import("./views/DnD.vue")
     }
   ]
 });

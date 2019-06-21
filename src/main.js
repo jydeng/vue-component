@@ -5,6 +5,7 @@ import Alert from "./components/Alert/alert.js";
 import MessageBox from "./components/MessageBox/index.js";
 
 Vue.use(MessageBox);
+
 Vue.config.productionTip = false;
 Vue.prototype.$Alert = Alert;
 

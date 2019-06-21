@@ -12,6 +12,7 @@
       <router-link to="/tableSlot">8. Table-slot </router-link> |
       <router-link to="/heading">9. Heading </router-link> |
       <router-link to="/messageBox">10. MessageBox </router-link>
+      <router-link to="/dnd">11. dnd </router-link>
     </div>
   </div>
 </template>
