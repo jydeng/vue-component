@@ -1,6 +1,5 @@
 const code = `<template>
     <div>
-        default-code.js内容
         <input v-model="message">
         {{ message }}
     </div>
