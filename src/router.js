@@ -60,6 +60,25 @@ export default new Router({
       path: "/dnd",
       name: "dnd",
       component: () => import("./views/DnD.vue")
+    },
+    {
+      path: "/preview",
+      name: "preview",
+      component: () => import("./views/Preview"),
+      children: [
+        {
+          path: "/",
+          redirect: "mobile"
+        },
+        {
+          path: "pc",
+          component: () => import("./views/Preview/pc.vue")
+        },
+        {
+          path: "mobile",
+          component: () => import("./views/Preview/mobile.vue")
+        }
+      ]
     }
   ]
 });
