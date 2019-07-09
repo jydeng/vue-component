@@ -1,3 +1,10 @@
 module.exports = {
-  runtimeCompiler: true
+  runtimeCompiler: true,
+  configureWebpack: () => {
+    return {
+      externals: {
+        CKEDITOR: "CKEDITOR"
+      }
+    };
+  }
 };

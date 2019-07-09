@@ -79,6 +79,11 @@ export default new Router({
           component: () => import("./views/Preview/mobile.vue")
         }
       ]
+    },
+    {
+      path: "/ckeditor",
+      name: "ckeditor",
+      component: () => import("./views/CKEditor")
     }
   ]
 });
