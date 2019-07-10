@@ -27,7 +27,7 @@ CKEDITOR.plugins.add("rlink", {
     CKEDITOR.addCss(css);
 
     // 添加按钮
-    editor.ui.addButton("RLink", {
+    editor.ui.addButton("Rlink", {
       label: "超链接",
       command: "rlink",
       toolbar: "insert"

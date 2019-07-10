@@ -16,7 +16,7 @@ export default {
     // 标题
     title: {
       type: String,
-      default: "富文本编辑器beta版. Roy"
+      default: "富文本编辑器beta版."
     },
     // 工具栏配置
     toolbar: {
@@ -129,21 +129,21 @@ export default {
         this.editor.on("doubleclick", evt => {
           switch (evt.data.element.$.className) {
             case "mod_rvideo":
-              this.$emit("dbl_rvideo", {
+              this.$emit("dbl_video", {
                 url: getHTMLAttribute(
-                  decodeURIComponent(
-                    evt.data.element.$.dataset.ckeRealelement
-                  ).pop()
-                )
+                  decodeURIComponent(evt.data.element.$.dataset.ckeRealelement),
+                  "video",
+                  "src"
+                ).pop()
               });
               break;
             case "mod_rimage":
-              this.$emit("dbl_rimage", {
+              this.$emit("dbl_image", {
                 url: evt.data.element.$.dataset.ckeSavedSrc
               });
               break;
             case "mod_rlink":
-              this.$emit("dbl_rlink", {
+              this.$emit("dbl_link", {
                 href: evt.data.element.$.href,
                 html: evt.data.element.$.innerHTML
               });
@@ -160,10 +160,12 @@ export default {
   },
   mounted() {
     this.init();
-    // v-model 绑定
-    this.currentValue = this.value;
-    // 同步到编辑器
-    this.editor.setData(this.currentValue);
+    setTimeout(() => {
+      // v-model 绑定
+      this.currentValue = this.value;
+      // 同步到编辑器
+      this.editor.setData(this.currentValue);
+    }, 1000);
   },
   beforeDestroy() {
     this.destroy();

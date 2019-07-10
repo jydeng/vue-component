@@ -11,7 +11,7 @@ CKEDITOR.plugins.add("rvideo", {
           let valid_limit = limit >= file.size / 1024;
           let valid_suffix = ~Object.values(suffixs).indexOf(file.type);
           let result = {
-            success: true,
+            success: false,
             message: []
           };
 

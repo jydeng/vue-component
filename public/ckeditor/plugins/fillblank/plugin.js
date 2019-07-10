@@ -4,7 +4,7 @@ CKEDITOR.plugins.add("fillblank", {
     editor.addCommand("insertFillBlank", {
       // 点击按钮执行的函数
       exec: function(editor) {
-        editor.insertText("[填空]");
+        editor.insertText("[______]");
       }
     });
     // 添加按钮

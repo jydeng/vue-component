@@ -1,30 +1,6 @@
 <template>
   <div class="wrap">
-    <iEditor
-      v-model="txt"
-      :rimage="rimage"
-      :rvideo="rvideo"
-      :rlink="rlink"
-    ></iEditor>
-    <iEditor
-      v-model="txt"
-      :rimage="rimage"
-      :rvideo="rvideo"
-      :rlink="rlink"
-    ></iEditor>
-    <iEditor
-      v-model="txt"
-      :rimage="rimage"
-      :rvideo="rvideo"
-      :rlink="rlink"
-    ></iEditor>
-    <iEditor
-      v-model="txt"
-      :rimage="rimage"
-      :rvideo="rvideo"
-      :rlink="rlink"
-      @dbl_rimage="dbl_rvideo"
-    ></iEditor>
+    <iEditor v-model="txt" @dbl_video="dbl_rvideo"></iEditor>
   </div>
 </template>
 <script>
@@ -36,22 +12,7 @@ export default {
   data() {
     return {
       txt:
-        "<p>Initial value.<img class='mod_rimage' src='http://localhost:3000/upload-files/album/4c26d33489f19.jpg' /><a class='mod_rlink' href='xx'>xxx</a></p>",
-      rimage: {
-        callback: function(...all) {
-          console.log(all);
-        }
-      },
-      rvideo: {
-        callback: function(...all) {
-          console.log(all);
-        }
-      },
-      rlink: {
-        callback: function(...all) {
-          console.log(all);
-        }
-      }
+        '<p>Initial value.<img  src="http://localhost:3000/upload-files/album/f558133e89bc9.jpg" /><video src="http://localhost:3000/upload-files/album/5a4c31c66e5e8.mp4" controls="controls" controlslist="nodownload" style="max-width: 100%; height: auto;">&nbsp;</video>&nbsp;</p>'
     };
   },
   methods: {

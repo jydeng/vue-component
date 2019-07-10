@@ -37,7 +37,7 @@ export function translationTags(editor, evt) {
 }
 
 export function getHTMLAttribute(html, tag, attr) {
-  let reg = new RegExp(`/<${tag} [^>]*${attr}=['"]([^'"]+)[^>]*>/gi`);
+  let reg = new RegExp(`<video [^>]*src=['"]([^'"]+)[^>]*>`, "gi");
   let result = [];
   html.replace(reg, (match, capture) => {
     result.push(capture);
