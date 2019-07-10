@@ -43,10 +43,11 @@ CKEDITOR.plugins.add("rvideo", {
               .callback(valid, file)
               .then(function(url) {
                 let node = new CKEDITOR.dom.element("video");
-                node.setAttribute("src", url);
+                node.setAttribute("preload", "none");
                 node.setAttribute("controls", "controls");
                 node.setAttribute("controlslist", "nodownload");
                 node.setAttribute("style", "max-width: 100%; height: auto;");
+                node.setAttribute("src", url);
                 let elem = editor.createFakeElement(
                   node,
                   "mod_rvideo",

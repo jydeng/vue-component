@@ -10,10 +10,11 @@ export function createFakeImageHTML(editor, src) {
 
 export function createFakeVideoHTML(editor, src) {
   let node = new CKEDITOR.dom.element("video");
-  node.setAttribute("src", src);
+  node.setAttribute("preload", "none");
   node.setAttribute("controls", "controls");
   node.setAttribute("controlslist", "nodownload");
   node.setAttribute("style", "max-width: 100%; height: auto;");
+  node.setAttribute("src", src);
   let elem = editor.createFakeElement(node, "mod_rvideo", "Video", true);
   elem.setAttribute("src", CKEDITOR.getUrl("plugins/rvideo/icons/rvideo.png"));
   elem.setAttribute("class", "mod_rvideo");
