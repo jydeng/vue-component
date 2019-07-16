@@ -16,6 +16,7 @@
         <li><router-link to="/dnd">DnD</router-link></li>
         <li><router-link to="/preview">Preview</router-link></li>
         <li><router-link to="/ckeditor">CKeditor</router-link></li>
+        <li><router-link to="/textarea">TextArea</router-link></li>
       </ol>
     </div>
   </div>

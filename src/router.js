@@ -63,7 +63,6 @@ export default new Router({
     },
     {
       path: "/preview",
-      name: "preview",
       component: () => import("./views/Preview"),
       children: [
         {
@@ -84,6 +83,11 @@ export default new Router({
       path: "/ckeditor",
       name: "ckeditor",
       component: () => import("./views/CKEditor")
+    },
+    {
+      path: "/textarea",
+      name: "textarea",
+      component: () => import("./views/TextArea")
     }
   ]
 });
