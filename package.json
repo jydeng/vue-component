@@ -9,9 +9,13 @@
   },
   "dependencies": {
     "async-validator": "^1.10.1",
+    "luxon": "^1.19.3",
+    "mint-ui": "^2.2.13",
     "vue": "^2.5.21",
+    "vue-datetime": "^1.0.0-beta.10",
     "vue-router": "^3.0.1",
-    "vuedraggable": "^2.21.0"
+    "vuedraggable": "^2.21.0",
+    "weekstart": "^1.0.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.3.0",

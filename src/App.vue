@@ -17,6 +17,10 @@
         <li><router-link to="/preview">Preview</router-link></li>
         <li><router-link to="/ckeditor">CKeditor</router-link></li>
         <li><router-link to="/textarea">TextArea</router-link></li>
+        <li><router-link to="/datetimepicker">DateTimePiakcer</router-link></li>
+        <li>
+          <router-link to="/datetimepicker2">DateTimePiakcer2</router-link>
+        </li>
       </ol>
     </div>
   </div>

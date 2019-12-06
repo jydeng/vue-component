@@ -88,6 +88,16 @@ export default new Router({
       path: "/textarea",
       name: "textarea",
       component: () => import("./views/TextArea")
+    },
+    {
+      path: "/datetimepicker",
+      name: "datetimepicker",
+      component: () => import("./views/DateTimePicker")
+    },
+    {
+      path: "/datetimepicker2",
+      name: "datetimepicker2",
+      component: () => import("./views/DateTimePicker2")
     }
   ]
 });

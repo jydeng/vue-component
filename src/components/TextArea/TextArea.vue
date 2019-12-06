@@ -8,7 +8,9 @@
       @input="input"
       :readonly="!valid"
     ></textarea>
-    <div :class="{novalid:!valid}">可输入{{validInput.length}}/{{limit}}行</div>
+    <div :class="{ novalid: !valid }">
+      可输入{{ validInput.length }}/{{ limit }}行
+    </div>
   </div>
 </template>
 <script>
@@ -69,5 +71,3 @@ export default {
   color: red;
 }
 </style>
-
-

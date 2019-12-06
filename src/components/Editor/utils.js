@@ -37,7 +37,7 @@ export function translationTags(editor, evt) {
   evt.data.dataValue = newHtml;
 }
 
-export function getHTMLAttribute(html, tag, attr) {
+export function getHTMLAttribute(html) {
   let reg = new RegExp(`<video [^>]*src=['"]([^'"]+)[^>]*>`, "gi");
   let result = [];
   html.replace(reg, (match, capture) => {
@@ -50,8 +50,8 @@ export function getHTMLAttribute(html, tag, attr) {
 export function rimageConfig(config) {
   let defaultConfig = {
     // 选择文件触发
-    callback: function(valid, file) {
-      return new Promise(resolve => {
+    callback: function() {
+      return new Promise(() => {
         // 此处实现上传文件等操作
         // 针对文件类型与大小的校验内部已实现
         // 只要resolve返回视频地址即可
@@ -77,8 +77,8 @@ export function rimageConfig(config) {
 export function rvideoConfig(config) {
   let defaultConfig = {
     // 选择完毕回调
-    callback: function(valid, file) {
-      return new Promise(resolve => {
+    callback: function() {
+      return new Promise(() => {
         // 此处实现上传文件等操作
         // 针对文件类型与大小的校验内部已实现
         // 只要resolve返回视频地址即可
@@ -109,7 +109,7 @@ export function rlinkConfig(config) {
   let defaultConfig = {
     callback: function() {
       // 点击link按钮回调
-      return new Promise(resolve => {
+      return new Promise(() => {
         // 此处实现输入文本与href弹窗
         // 只要resolve文本与href即可
         // resolve("测试的链接", "http://www.baidu.com");

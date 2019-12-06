@@ -16,9 +16,7 @@ export default {
     };
   },
   methods: {
-    dbl_rvideo(payload) {
-      console.log(payload);
-    }
+    dbl_rvideo() {}
   }
 };
 </script>
