@@ -21,6 +21,7 @@
         <li>
           <router-link to="/datetimepicker2">DateTimePiakcer2</router-link>
         </li>
+        <li><router-link to="/pdf">PDF</router-link></li>
       </ol>
     </div>
   </div>

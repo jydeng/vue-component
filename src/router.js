@@ -98,6 +98,11 @@ export default new Router({
       path: "/datetimepicker2",
       name: "datetimepicker2",
       component: () => import("./views/DateTimePicker2")
+    },
+    {
+      path: "/pdf",
+      name: "pdf",
+      component: () => import("./views/Pdf")
     }
   ]
 });
